@@ -44,11 +44,6 @@ oauth2 (JWT authorization) for users and a crud for products (GET, POST,PUT, DEL
 After you download the project from GitHub, install 'requirement.txt' by using this command in terminal (Windows users) : <br />
     python -m pip install requests
 
-
-## How to use program
-
-
-
 ## Authors
 
 Hamed Nahvi <br />
