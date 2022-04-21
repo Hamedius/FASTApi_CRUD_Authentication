@@ -30,18 +30,18 @@ oauth2 (JWT authorization) for users and a crud for products (GET, POST,PUT, DEL
 
 ## Dependencies
 
-python 3.8 +
-fastapi
-uvicorn
-pydantic
-sqlalchemy
-passlib
-bcrypt
-python-jose
+- python 3.8 +
+- fastapi
+- uvicorn
+- pydantic
+- sqlalchemy
+- passlib
+- bcrypt
+- python-jose
 
 ## Installing
 
-After you download the project from GitHub, install 'requirement.txt' by using this command in terminal (Windows users) :
+After you download the project from GitHub, install 'requirement.txt' by using this command in terminal (Windows users) : <br />
     python -m pip install requests
 
 
@@ -51,5 +51,5 @@ After you download the project from GitHub, install 'requirement.txt' by using t
 
 ## Authors
 
-Hamed Nahvi
+Hamed Nahvi <br />
 hamed.artan@gmail.com
