@@ -12,21 +12,21 @@ This repository is intended as a practical template for building **production-re
 
 ---
 
-## 🔐 Key Features
+##  Key Features
 
-### 🔑 JWT Authentication
+###  JWT Authentication
 - Login endpoint returns a **JWT access token**
 - Expiration handled through token payload
 - Secure routes require `Authorization: Bearer <token>`
 - Passwords hashed using industry-standard algorithms (`hashing.py`)
 
-### 👥 User Management
+###  User Management
 - Register new users
 - Login to receive token
 - Fetch user data
 - All password handling follows best practices (never stored as plain text)
 
-### 📦 CRUD Operations
+###  CRUD Operations
 
 #### Products
 - Create new product
@@ -39,7 +39,7 @@ All product routes are **protected** and require authentication.
 - Get user list
 - Get user by ID
 
-### 🧱 Clean Architecture
+###  Clean Architecture
 - `routers/` → API routing layer  
 - `repository/` → business/database logic  
 - `database.py` → SQLAlchemy session & engine  
@@ -50,7 +50,7 @@ All product routes are **protected** and require authentication.
 
 ---
 
-## 📁 Project structure
+##  Project structure
 
 ```text
 FASTApi_CRUD_Authentication/
@@ -79,7 +79,7 @@ This structure mirrors real-world FastAPI production apps.
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone the repository
 ```bash
@@ -100,7 +100,7 @@ pip install -r requirement.txt
 
 ---
 
-## 🗄️ Database Configuration
+##  Database Configuration
 
 Default DB: **SQLite**  
 It works out-of-the-box with no configuration.
@@ -113,7 +113,7 @@ and update the SQLAlchemy connection string.
 
 ---
 
-## ▶️ Running the App
+##  Running the App
 
 Run with Uvicorn:
 
@@ -128,9 +128,9 @@ Open the interactive API docs:
 
 ---
 
-## 🔐 Authentication Flow (How Login Works)
+##  Authentication Flow (How Login Works)
 
-### 1️⃣ Register new user  
+### 1 - Register new user  
 **POST** `/users/`
 
 Request body:
@@ -142,7 +142,7 @@ Request body:
 }
 ```
 
-### 2️⃣ Login  
+### 2 - Login  
 **POST** `/login`
 
 If credentials are correct, the response contains:
@@ -153,7 +153,7 @@ If credentials are correct, the response contains:
 }
 ```
 
-### 3️⃣ Call protected endpoint  
+### 3 - Call protected endpoint  
 Header:
 ```
 Authorization: Bearer <access_token>
@@ -166,7 +166,7 @@ curl -X GET "http://127.0.0.1:8000/product/"      -H "Authorization: Bearer <tok
 
 ---
 
-## 🧠 Token Internals (JWT)
+##  Token Internals (JWT)
 
 Your tokens contain:
 - `user_id`  
@@ -178,7 +178,7 @@ Validation handled automatically by FastAPI's `Depends()`.
 
 ---
 
-## 💼 Example Endpoints
+##  Example Endpoints
 
 ### Users
 - **POST** `/users/` → create user  
@@ -196,7 +196,7 @@ Validation handled automatically by FastAPI's `Depends()`.
 
 ---
 
-## 🧱 Code Architecture Overview
+##  Code Architecture Overview
 
 - `main.py` → FastAPI app  
 - `routers/` → API endpoints  
@@ -208,20 +208,6 @@ Validation handled automatically by FastAPI's `Depends()`.
 
 ---
 
-## 📌 Future Enhancements
+##  Author
 
-- Add refresh tokens  
-- Add email verification  
-- Add role-based access control  
-- Add async SQLAlchemy engine  
-- Add unit tests (pytest + TestClient)  
-- Dockerize the application  
-- Deploy on Render / Fly.io  
-- Add rate limiting  
-
----
-
-## 👤 Author
-
-**Hamed Nahvi**  
-GitHub: @Hamedius
+**Hamed Nahvi**
